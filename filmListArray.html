@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Films List</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container mt-5">
+        <a href="index.html" class="btn btn-secondary mb-3">Back to Home</a>
+        <h1>Films List</h1>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Director</th>
+                </tr>
+            </thead>
+            <tbody id="films-table-body">
+                <!-- Film rows will be inserted here by JavaScript -->
+            </tbody>
+        </table>
+    </div>
+    <!-- Custom JS to import and render films -->
+    <script type="module">
+        import { films } from './dataFilms.mjs';
+
+        const filmsTableBody = document.getElementById('films-table-body');
+        const filmTemplate = (film) => `
+            <tr>
+                <td>${film.title}</td>
+                <td>${film.director}</td>
+            </tr>
+        `;
+
+        films.forEach(film => {
+            filmsTableBody.insertAdjacentHTML('beforeend', filmTemplate(film));
+        });
+    </script>
+</body>
+</html>

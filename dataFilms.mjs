@@ -31,6 +31,7 @@ export const films = [
     }
 ];
 
+// Map of actor salaries in USD for the respective films
 export const actorSalaries = new Map([
     ["Leonardo DiCaprio", 200000],
     ["Elliot Page", 1000],

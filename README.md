@@ -39,15 +39,8 @@ Contains film objects with the following properties:
 - `director`: Director name
 - `actors`: Array of actor names
 
-### Actor Salaries Map
+### Actor Salaries Map (not usefull for this project )
 A JavaScript Map containing actor salaries (in USD) for the films in the collection.
-
-### Sample Films
-- Inception (2010)
-- The Dark Knight (2008)
-- Titanic (1997)
-- Avatar (2009)
-- Mad Max: Fury Road (2015)
 
 ## 🛠️ Technologies Used
 
@@ -62,11 +55,6 @@ A JavaScript Map containing actor salaries (in USD) for the films in the collect
 
 ## 💻 Getting Started
 
-### Prerequisites
-
-- A modern web browser with ES6 module support (Chrome, Firefox, Safari, Edge)
-- A local web server (required for ES6 modules to work)
-
 ### Installation
 
 1. Clone or download this repository
@@ -74,7 +62,7 @@ A JavaScript Map containing actor salaries (in USD) for the films in the collect
 
 ### Running the Application
 
-Since this project uses ES6 modules, you need to serve it through a web server. Here are several options:
+Since this project uses <mark> ES6 modules <mark>, you need to serve it through a web server. Here are several options:
 
 #### Option 1: Using Python
 ```bash
@@ -99,12 +87,6 @@ Open your browser and navigate to:
 ```
 http://localhost:8000
 ```
-
-## 📖 Usage
-
-1. **Home Page**: Navigate between different views using the provided buttons
-2. **Table View** (`filmListArray.html`): View films in a structured table format
-3. **List View** (`filmListUl.html`): View films in a list format with director information
 
 ## 🎨 Two Display Methods Explained
 
@@ -147,21 +129,16 @@ const filmTemplate = (film) => `
 
 **Visual Structure**:
 ```
-┌──────────────────────────────────────────┐
+┌───────────────────────────────────────────┐
 │ Inception - Directed by Christopher Nolan │
-├──────────────────────────────────────────┤
+├───────────────────────────────────────────┤
 │ The Dark Knight - Directed by Christopher │
 │ Nolan                                     │
-├──────────────────────────────────────────┤
+├───────────────────────────────────────────┤
 │ ...                                       │
-└──────────────────────────────────────────┘
+└───────────────────────────────────────────┘
 ```
 
-**Use Case**:
-- Better for narrative or descriptive content
-- More readable for mobile devices
-- Natural reading flow
-- Easier to add icons, badges, or action buttons
 
 **Template Structure**:
 ```javascript
@@ -171,16 +148,6 @@ const filmTemplate = (film) => `
     </li>
 `;
 ```
-
-### Comparison
-
-| Feature | Table View | List View |
-|---------|-----------|-----------|
-| **Layout** | Grid/Columns | Stacked Items |
-| **Bootstrap Class** | `.table` | `.list-group` |
-| **Best For** | Structured data | Reading content |
-| **Mobile** | Requires horizontal scroll | Fully responsive |
-| **Extensibility** | Add columns | Add content blocks |
 
 ## 🔄 Common JavaScript Pattern
 
@@ -309,14 +276,6 @@ Each HTML file (`filmListArray.html`, `filmListUl.html`) contains:
 - A rendering loop that processes the film data
 
 Modify the `filmTemplate` function in each file to change how films are displayed.
-
-## 🌐 Browser Compatibility
-
-This project requires a browser that supports:
-- ES6 Modules
-- Template literals
-- Arrow functions
-- `insertAdjacentHTML`
 
 ## 📝 Learning Objectives
 
